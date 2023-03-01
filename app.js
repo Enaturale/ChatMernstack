@@ -5,7 +5,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
-//Setup error ahandlers
+//Setup error handlers
 const errorHandlers = require('./handlers/errorHandlers')
 app.use(errorHandlers.notFound)
 app.use(errorHandlers.mongoseErrors);
